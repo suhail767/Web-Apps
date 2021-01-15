@@ -1,0 +1,125 @@
+[
+  "connections/db",
+  "SecurityProviders/sp_log",
+  {
+    "name": "",
+    "module": "auth",
+    "action": "restrict",
+    "options": {
+      "provider": "sp_log",
+      "loginUrl": "/Login_user",
+      "forbiddenUrl": "/Home_page"
+    }
+  },
+  {
+    "name": "logged_in_user_data_query",
+    "module": "dbconnector",
+    "action": "single",
+    "options": {
+      "connection": "db",
+      "sql": {
+        "type": "SELECT",
+        "columns": [
+          {
+            "table": "userinfo",
+            "column": "id"
+          },
+          {
+            "table": "userinfo",
+            "column": "username"
+          },
+          {
+            "table": "users",
+            "column": "first_name"
+          },
+          {
+            "table": "users",
+            "column": "last_name"
+          },
+          {
+            "table": "users",
+            "column": "email"
+          }
+        ],
+        "table": {
+          "name": "userinfo"
+        },
+        "joins": [
+          {
+            "table": "users",
+            "column": "*",
+            "type": "INNER",
+            "clauses": {
+              "condition": "AND",
+              "rules": [
+                {
+                  "table": "users",
+                  "column": "id",
+                  "operator": "equal",
+                  "value": {
+                    "table": "userinfo",
+                    "column": "id"
+                  },
+                  "operation": "="
+                }
+              ]
+            }
+          }
+        ],
+        "wheres": {
+          "condition": "AND",
+          "rules": [
+            {
+              "id": "userinfo.id",
+              "field": "userinfo.id",
+              "type": "double",
+              "operator": "equal",
+              "value": "{{identity}}",
+              "data": {
+                "table": "userinfo",
+                "column": "id",
+                "type": "number"
+              },
+              "operation": "="
+            }
+          ],
+          "conditional": null,
+          "valid": true
+        },
+        "query": "SELECT userinfo.id, userinfo.username, users.first_name, users.last_name, users.email\nFROM userinfo\nINNER JOIN users ON (users.id = userinfo.id)\nWHERE userinfo.id = :P1 /* {{identity}} */",
+        "params": [
+          {
+            "operator": "equal",
+            "type": "expression",
+            "name": ":P1",
+            "value": "{{identity}}"
+          }
+        ]
+      }
+    },
+    "output": true,
+    "meta": [
+      {
+        "name": "id",
+        "type": "text"
+      },
+      {
+        "name": "username",
+        "type": "text"
+      },
+      {
+        "name": "first_name",
+        "type": "text"
+      },
+      {
+        "name": "last_name",
+        "type": "text"
+      },
+      {
+        "name": "email",
+        "type": "text"
+      }
+    ],
+    "outputType": "object"
+  }
+]

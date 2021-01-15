@@ -1,0 +1,26 @@
+{
+  "name": "sp_log",
+  "module": "auth",
+  "action": "provider",
+  "options": {
+    "secret": "rCW4XRBrJgNlacd",
+    "provider": "Database",
+    "connection": "db",
+    "passwordVerify": true,
+    "secure": true,
+    "users": {
+      "table": "userinfo",
+      "identity": "id",
+      "username": "username",
+      "password": "password"
+    },
+    "permissions": {},
+    "sameSite": "Strict"
+  },
+  "meta": [
+    {
+      "name": "identity",
+      "type": "text"
+    }
+  ]
+}

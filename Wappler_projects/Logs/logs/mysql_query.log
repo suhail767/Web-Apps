@@ -1,0 +1,738 @@
+/usr/sbin/mysqld, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2021-01-11T19:32:19.576030Z	    8 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-11T19:32:19.583056Z	    8 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-11T19:35:18.697317Z	    9 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-11T19:35:18.703280Z	    9 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'alskd'
+2021-01-11T19:47:12.399901Z	   10 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-11T19:47:12.440835Z	   10 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-11T19:47:46.367566Z	   10 Query	insert into `userinfo` (`password`, `username`) values ('7961f5bbd4d0d1ea33e6e394f3988c3746222027460418633961b2a78d0df18083d409282e1a1173fd67f1627585a253cb19374d92188ba7677e7c5694e66bcf', 'suhail767')
+2021-01-11T19:47:46.414766Z	   10 Query	insert into `users` (`company`, `email`, `first_name`, `gender`, `last_name`) values ('MIT', 'suhail123@gmail.com', 'Suhail', 'Male', 'Parakkal')
+2021-01-11T19:48:13.892277Z	   10 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-11T19:48:25.279924Z	   10 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-11T19:48:36.404394Z	   10 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-11T19:49:14.198674Z	   11 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-11T19:49:14.211834Z	   11 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-11T20:17:52.748330Z	   12 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-11T20:17:52.755386Z	   12 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-11T20:27:54.715527Z	   13 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-11T20:27:54.727611Z	   13 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-11T20:28:01.412487Z	   13 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+/usr/sbin/mysqld, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2021-01-12T05:01:36.187467Z	    8 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T05:01:36.192014Z	    8 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-12T05:14:04.185234Z	    9 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:04.189794Z	    9 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-12T05:14:04.196854Z	    9 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-12T05:14:04.202718Z	    9 Query	select * from `wappler_migrations_lock`
+2021-01-12T05:14:04.206205Z	    9 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-12T05:14:04.211654Z	    9 Query	BEGIN
+2021-01-12T05:14:04.215207Z	    9 Query	update `wappler_migrations_lock` set `is_locked` = 1 where `is_locked` = 0
+2021-01-12T05:14:04.217580Z	    9 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-12T05:14:04.220893Z	    9 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-12T05:14:04.224075Z	    9 Query	select * from `wappler_migrations_lock`
+2021-01-12T05:14:04.226297Z	    9 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-12T05:14:04.229709Z	    9 Query	select max(`batch`) as `max_batch` from `wappler_migrations`
+2021-01-12T05:14:04.234110Z	    9 Query	create table `Topics` (`id` int unsigned not null auto_increment primary key, `topic` varchar(255), `entry` varchar(255))
+2021-01-12T05:14:04.259837Z	    9 Query	insert into `wappler_migrations` (`batch`, `migration_time`, `name`) values (2, '2021-01-12 10:44:04.023', '20210112104403_topics.js')
+2021-01-12T05:14:04.264732Z	    9 Query	update `wappler_migrations_lock` set `is_locked` = 0
+2021-01-12T05:14:04.269351Z	    9 Query	COMMIT
+2021-01-12T05:14:04.318750Z	   10 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:04.321656Z	   10 Query	select TABLE_NAME, ENGINE, TABLE_SCHEMA, TABLE_COLLATION, TABLE_COMMENT from information_schema.tables where table_schema = 'logs' and table_type = 'BASE TABLE' order by CREATE_TIME desc
+2021-01-12T05:14:04.328758Z	   10 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'Topics' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:04.339488Z	   11 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:04.339911Z	   12 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:04.340594Z	   13 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:04.341072Z	   14 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:04.341691Z	   15 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:04.345024Z	   10 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'userinfo' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:04.352193Z	   11 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'cars' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:04.352294Z	   12 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'countries' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:04.352696Z	   13 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'images' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:04.353555Z	   14 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'users' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:04.406576Z	    9 Quit	
+2021-01-12T05:14:04.505202Z	   13 Quit	
+2021-01-12T05:14:04.505220Z	   12 Quit	
+2021-01-12T05:14:04.505234Z	   15 Quit	
+2021-01-12T05:14:04.505238Z	   11 Quit	
+2021-01-12T05:14:04.505336Z	   10 Quit	
+2021-01-12T05:14:04.505460Z	   14 Quit	
+2021-01-12T05:14:20.032190Z	   16 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:20.034210Z	   16 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-12T05:14:20.037257Z	   16 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-12T05:14:20.042333Z	   16 Query	select * from `wappler_migrations_lock`
+2021-01-12T05:14:20.044352Z	   16 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-12T05:14:20.047206Z	   16 Query	BEGIN
+2021-01-12T05:14:20.049237Z	   16 Query	update `wappler_migrations_lock` set `is_locked` = 1 where `is_locked` = 0
+2021-01-12T05:14:20.051095Z	   16 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-12T05:14:20.053706Z	   16 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-12T05:14:20.060442Z	   16 Query	select * from `wappler_migrations_lock`
+2021-01-12T05:14:20.062718Z	   16 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-12T05:14:20.064961Z	   16 Query	select max(`batch`) as `max_batch` from `wappler_migrations`
+2021-01-12T05:14:20.067801Z	   16 Query	rename table `Topics` to `topics`
+2021-01-12T05:14:20.087467Z	   16 Query	insert into `wappler_migrations` (`batch`, `migration_time`, `name`) values (3, '2021-01-12 10:44:19.851', '20210112104419_topic.js')
+2021-01-12T05:14:20.092713Z	   16 Query	update `wappler_migrations_lock` set `is_locked` = 0
+2021-01-12T05:14:20.096970Z	   16 Query	COMMIT
+2021-01-12T05:14:20.129459Z	   17 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:20.131367Z	   17 Query	select TABLE_NAME, ENGINE, TABLE_SCHEMA, TABLE_COLLATION, TABLE_COMMENT from information_schema.tables where table_schema = 'logs' and table_type = 'BASE TABLE' order by CREATE_TIME desc
+2021-01-12T05:14:20.136024Z	   17 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'topics' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:20.138982Z	   18 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:20.139589Z	   20 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:20.139712Z	   19 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:20.143355Z	   22 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:20.143531Z	   21 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:14:20.144346Z	   18 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'userinfo' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:20.144838Z	   20 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'cars' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:20.146427Z	   17 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'countries' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:20.146773Z	   19 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'images' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:20.147397Z	   21 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'users' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T05:14:20.204315Z	   16 Quit	
+2021-01-12T05:14:20.287186Z	   21 Quit	
+2021-01-12T05:14:20.287264Z	   17 Quit	
+2021-01-12T05:14:20.287253Z	   20 Quit	
+2021-01-12T05:14:20.287287Z	   19 Quit	
+2021-01-12T05:14:20.287305Z	   22 Quit	
+2021-01-12T05:14:20.287310Z	   18 Quit	
+2021-01-12T05:43:24.822265Z	   23 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:43:24.825875Z	   23 Query	select `id`, `topic`, `entry` from `topics` limit 100
+2021-01-12T05:43:24.987854Z	   23 Quit	
+2021-01-12T05:43:26.023474Z	   24 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:43:26.025853Z	   24 Query	select `id`, `topic`, `entry` from `topics` limit 100
+2021-01-12T05:43:26.180645Z	   24 Quit	
+2021-01-12T05:43:26.910395Z	   25 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:43:26.912765Z	   25 Query	select `id`, `topic`, `entry` from `topics` limit 100
+2021-01-12T05:43:27.068137Z	   25 Quit	
+2021-01-12T05:43:27.155002Z	   26 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:43:27.157054Z	   26 Query	select `id`, `topic`, `entry` from `topics` limit 100
+2021-01-12T05:43:27.326422Z	   26 Quit	
+2021-01-12T05:43:27.354084Z	   27 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:43:27.355943Z	   27 Query	select `id`, `topic`, `entry` from `topics` limit 100
+2021-01-12T05:43:27.530599Z	   27 Quit	
+2021-01-12T05:43:27.859160Z	   28 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T05:43:27.866271Z	   28 Query	select `id`, `topic`, `entry` from `topics` limit 100
+2021-01-12T05:43:28.037709Z	   28 Quit	
+2021-01-12T06:17:14.806452Z	   29 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T06:17:14.814089Z	   29 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-12T06:22:43.689966Z	   30 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T06:22:43.698677Z	   30 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'suhail767'
+2021-01-12T06:22:43.881896Z	   30 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 5 limit 1
+2021-01-12T06:29:43.679865Z	   31 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T06:29:43.685112Z	   31 Query	insert into `userinfo` (`password`, `username`) values ('b90eb0c518bde0d569cb095dba455463ef69c24aafdf9e23ca1978485722962a719cd1f3eb48f481c2a47b8df022f56e34ec407e7467c3466a3de4c024a1a3bd', 'aero767')
+2021-01-12T06:29:43.731507Z	   31 Query	insert into `users` (`company`, `email`, `first_name`, `gender`, `last_name`) values ('Airbus', 'aero767@gmail.com', 'Suhail', 'Male', 'Parakkal')
+2021-01-12T06:32:35.765702Z	   32 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T06:32:35.773918Z	   32 Query	insert into `userinfo` (`password`, `username`) values ('df32fe752eba5f000e2bbb147ac431bf8094301e34be4ce32b3d52cb8245f86799553045be3a3390826560d7022a510209cd82d1224437d08f89e7efc79b986e', 'aero767p')
+2021-01-12T06:32:35.787165Z	   32 Query	insert into `users` (`company`, `email`, `first_name`, `gender`, `last_name`) values ('MIT', 'aero767@gmail.com', 'Aero', 'Male', 'Suhail')
+2021-01-12T06:32:56.954427Z	   32 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-12T06:32:57.415071Z	   32 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 6 limit 1
+2021-01-12T06:33:51.994318Z	   33 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:33:52.011303Z	   33 Query	select `id`, `username`, `password` from `userinfo` limit 100
+2021-01-12T06:33:52.232796Z	   33 Quit	
+2021-01-12T06:34:23.041540Z	   34 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:34:23.046944Z	   34 Query	select `id`, `first_name`, `last_name`, `gender`, `email`, `company`, `avatar` from `users` limit 100
+2021-01-12T06:34:23.379993Z	   34 Quit	
+2021-01-12T06:35:01.946016Z	   35 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:35:01.952605Z	   35 Query	delete from `users` where `id` in (3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+2021-01-12T06:35:02.111935Z	   35 Quit	
+2021-01-12T06:35:18.820584Z	   36 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:35:18.835449Z	   36 Query	select `id`, `username`, `password` from `userinfo` limit 100
+2021-01-12T06:35:19.049219Z	   36 Quit	
+2021-01-12T06:35:36.912245Z	   37 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:35:36.929021Z	   37 Query	delete from `userinfo` where `id` in (1, 2, 3, 4, 5, 6, 7)
+2021-01-12T06:35:37.086835Z	   37 Quit	
+2021-01-12T06:35:50.373749Z	   38 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:35:50.378274Z	   38 Query	select `id`, `first_name`, `last_name`, `gender`, `email`, `company`, `avatar` from `users` limit 100
+2021-01-12T06:35:50.634333Z	   38 Quit	
+2021-01-12T06:35:55.609491Z	   39 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:35:55.622224Z	   39 Query	delete from `users` where `id` in (1, 2, 22, 23, 24, 25)
+2021-01-12T06:35:55.771319Z	   39 Quit	
+2021-01-12T06:37:10.846337Z	   40 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T06:37:10.854696Z	   40 Query	insert into `userinfo` (`password`, `username`) values ('b90eb0c518bde0d569cb095dba455463ef69c24aafdf9e23ca1978485722962a719cd1f3eb48f481c2a47b8df022f56e34ec407e7467c3466a3de4c024a1a3bd', 'aero767')
+2021-01-12T06:37:10.890285Z	   40 Query	insert into `users` (`company`, `email`, `first_name`, `gender`, `last_name`) values ('MIT', 'suhailaero@gmail.com', 'Suhail', 'Male', 'Parakkal')
+2021-01-12T06:37:14.434869Z	   40 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-12T06:37:14.803964Z	   40 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 8 limit 1
+2021-01-12T06:37:33.529273Z	   41 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:37:33.547868Z	   41 Query	select `id`, `username`, `password` from `userinfo` limit 100
+2021-01-12T06:37:33.768929Z	   41 Quit	
+2021-01-12T06:38:00.866460Z	   42 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:38:00.870624Z	   42 Query	select `id`, `first_name`, `last_name`, `gender`, `email`, `company`, `avatar` from `users` limit 100
+2021-01-12T06:38:01.137352Z	   42 Quit	
+2021-01-12T06:39:54.553722Z	   43 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:39:54.578744Z	   43 Query	select `id`, `first_name`, `last_name`, `gender`, `email`, `company`, `avatar` from `users` limit 100
+2021-01-12T06:39:54.917597Z	   43 Quit	
+2021-01-12T06:40:30.998044Z	   44 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:40:31.002559Z	   44 Query	select `id`, `username`, `password` from `userinfo` limit 100
+2021-01-12T06:40:31.274418Z	   44 Quit	
+2021-01-12T06:41:39.804702Z	   45 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:41:39.813484Z	   45 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-12T06:41:39.823621Z	   45 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-12T06:41:39.831174Z	   45 Query	select * from `wappler_migrations_lock`
+2021-01-12T06:41:39.837597Z	   45 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-12T06:41:39.851885Z	   45 Query	BEGIN
+2021-01-12T06:41:39.867202Z	   45 Query	update `wappler_migrations_lock` set `is_locked` = 1 where `is_locked` = 0
+2021-01-12T06:41:39.874400Z	   45 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-12T06:41:39.882160Z	   45 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-12T06:41:39.889555Z	   45 Query	select * from `wappler_migrations_lock`
+2021-01-12T06:41:39.894450Z	   45 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-12T06:41:39.904276Z	   45 Query	select max(`batch`) as `max_batch` from `wappler_migrations`
+2021-01-12T06:41:39.914845Z	   45 Query	alter table `userinfo` add `loginuser_id` varchar(255)
+2021-01-12T06:41:40.029174Z	   45 Query	alter table `users` add `regitster_id` varchar(255)
+2021-01-12T06:41:40.113603Z	   45 Query	insert into `wappler_migrations` (`batch`, `migration_time`, `name`) values (4, '2021-01-12 12:11:39.871', '20210112121139_chan.js')
+2021-01-12T06:41:40.152833Z	   45 Query	update `wappler_migrations_lock` set `is_locked` = 0
+2021-01-12T06:41:40.209547Z	   45 Query	COMMIT
+2021-01-12T06:41:40.370283Z	   45 Quit	
+2021-01-12T06:41:40.425161Z	   46 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:41:40.442886Z	   46 Query	select TABLE_NAME, ENGINE, TABLE_SCHEMA, TABLE_COLLATION, TABLE_COMMENT from information_schema.tables where table_schema = 'logs' and table_type = 'BASE TABLE' order by CREATE_TIME desc
+2021-01-12T06:41:40.503783Z	   46 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'users' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T06:41:40.530668Z	   46 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'userinfo' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T06:41:40.531065Z	   47 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:41:40.531814Z	   48 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:41:40.532917Z	   49 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:41:40.533432Z	   50 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:41:40.534121Z	   51 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:41:40.543170Z	   47 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'topics' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T06:41:40.543858Z	   48 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'cars' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T06:41:40.563440Z	   49 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'countries' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T06:41:40.566217Z	   46 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'images' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T06:41:40.746521Z	   50 Quit	
+2021-01-12T06:41:40.746868Z	   51 Quit	
+2021-01-12T06:41:40.747637Z	   48 Quit	
+2021-01-12T06:41:40.748408Z	   47 Quit	
+2021-01-12T06:41:40.748610Z	   49 Quit	
+2021-01-12T06:41:40.749526Z	   46 Quit	
+2021-01-12T06:43:59.637684Z	   52 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:43:59.652992Z	   52 Query	select `id`, `username`, `password`, `loginuser_id` from `userinfo` limit 100
+2021-01-12T06:43:59.898043Z	   52 Quit	
+2021-01-12T06:44:05.052791Z	   53 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:44:05.058581Z	   53 Query	delete from `userinfo` where `id` in (8)
+2021-01-12T06:44:05.215135Z	   53 Quit	
+2021-01-12T06:44:15.979462Z	   54 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:44:15.990808Z	   54 Query	select `id`, `first_name`, `last_name`, `gender`, `email`, `company`, `avatar`, `regitster_id` from `users` limit 100
+2021-01-12T06:44:16.318861Z	   54 Quit	
+2021-01-12T06:44:19.912250Z	   55 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:44:20.000458Z	   55 Query	delete from `users` where `id` in (26)
+2021-01-12T06:44:20.184299Z	   55 Quit	
+2021-01-12T06:44:51.575498Z	   56 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T06:44:51.589605Z	   56 Query	insert into `userinfo` (`loginuser_id`, `password`, `username`) values (false, 'b90eb0c518bde0d569cb095dba455463ef69c24aafdf9e23ca1978485722962a719cd1f3eb48f481c2a47b8df022f56e34ec407e7467c3466a3de4c024a1a3bd', 'aero767')
+2021-01-12T06:44:51.602609Z	   56 Query	insert into `users` (`company`, `email`, `first_name`, `gender`, `last_name`, `regitster_id`) values ('MIT', 'suhail23@gmail.com', 'suhail', 'Male', 'aero', 9)
+2021-01-12T06:44:56.426157Z	   56 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-12T06:44:56.753517Z	   56 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-12T06:45:13.014300Z	   57 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:45:13.039950Z	   57 Query	select `id`, `username`, `password`, `loginuser_id` from `userinfo` limit 100
+2021-01-12T06:45:13.359773Z	   57 Quit	
+2021-01-12T06:45:31.176081Z	   58 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:45:31.181394Z	   58 Query	select `id`, `first_name`, `last_name`, `gender`, `email`, `company`, `avatar`, `regitster_id` from `users` limit 100
+2021-01-12T06:45:31.621833Z	   58 Quit	
+2021-01-12T06:45:41.330326Z	   59 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T06:45:41.343594Z	   59 Query	delete from `users` where `id` in (27)
+2021-01-12T06:45:41.496758Z	   59 Quit	
+/usr/sbin/mysqld, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2021-01-12T15:26:23.781494Z	    8 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T15:26:23.786032Z	    8 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-12T15:26:23.951831Z	    8 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-12T15:48:30.351609Z	    9 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T15:48:30.365610Z	    9 Query	select `id`, `topic`, `entry` from `topics` limit 100
+2021-01-12T15:48:30.589928Z	    9 Quit	
+2021-01-12T15:50:05.131607Z	   10 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T15:50:05.134000Z	   10 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-12T15:50:05.143020Z	   10 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-12T15:50:05.147768Z	   10 Query	select * from `wappler_migrations_lock`
+2021-01-12T15:50:05.151155Z	   10 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-12T15:50:05.157112Z	   10 Query	BEGIN
+2021-01-12T15:50:05.160561Z	   10 Query	update `wappler_migrations_lock` set `is_locked` = 1 where `is_locked` = 0
+2021-01-12T15:50:05.162607Z	   10 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-12T15:50:05.165415Z	   10 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-12T15:50:05.168150Z	   10 Query	select * from `wappler_migrations_lock`
+2021-01-12T15:50:05.170093Z	   10 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-12T15:50:05.173371Z	   10 Query	select max(`batch`) as `max_batch` from `wappler_migrations`
+2021-01-12T15:50:05.177446Z	   10 Query	alter table `topics` add `date_added` varchar(255)
+2021-01-12T15:50:05.200708Z	   10 Query	insert into `wappler_migrations` (`batch`, `migration_time`, `name`) values (5, '2021-01-12 21:20:08.235', '20210112212008_date.js')
+2021-01-12T15:50:05.206859Z	   10 Query	update `wappler_migrations_lock` set `is_locked` = 0
+2021-01-12T15:50:05.212995Z	   10 Query	COMMIT
+2021-01-12T15:50:05.251517Z	   11 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T15:50:05.253653Z	   11 Query	select TABLE_NAME, ENGINE, TABLE_SCHEMA, TABLE_COLLATION, TABLE_COMMENT from information_schema.tables where table_schema = 'logs' and table_type = 'BASE TABLE' order by CREATE_TIME desc
+2021-01-12T15:50:05.260617Z	   11 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'topics' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T15:50:05.265020Z	   13 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T15:50:05.265660Z	   12 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T15:50:05.266214Z	   14 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T15:50:05.267433Z	   15 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T15:50:05.268027Z	   16 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-12T15:50:05.268866Z	   13 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'users' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T15:50:05.269584Z	   12 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'userinfo' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T15:50:05.270283Z	   14 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'cars' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T15:50:05.273901Z	   11 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'countries' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T15:50:05.274651Z	   15 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'images' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-12T15:50:05.334800Z	   10 Quit	
+2021-01-12T15:50:05.433082Z	   16 Quit	
+2021-01-12T15:50:05.433503Z	   12 Quit	
+2021-01-12T15:50:05.433106Z	   11 Quit	
+2021-01-12T15:50:05.433527Z	   13 Quit	
+2021-01-12T15:50:05.433739Z	   15 Quit	
+2021-01-12T15:50:05.433779Z	   14 Quit	
+2021-01-12T16:55:47.117392Z	   17 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T16:55:47.128308Z	   17 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-12T17:55:46.000Z', '', '')
+2021-01-12T16:55:49.801692Z	   17 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-12T17:55:49.000Z', '', '')
+2021-01-12T17:09:32.241438Z	   18 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T17:09:32.247078Z	   18 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-12T18:09:32.000Z', 'Football is life', 'FIFA')
+2021-01-12T17:34:33.648091Z	   19 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T17:34:33.653749Z	   19 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-12T17:34:33.920432Z	   19 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+/usr/sbin/mysqld, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2021-01-12T17:40:49.999499Z	    8 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T17:40:50.009622Z	    8 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-12T18:40:49.000Z', 'Cat is an animal.', 'Cat')
+2021-01-12T17:42:39.887591Z	    9 Connect	db_user@172.21.0.3 on logs using TCP/IP
+2021-01-12T17:42:39.898165Z	    9 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-12T17:42:40.241023Z	    9 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+/usr/sbin/mysqld, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2021-01-13T06:56:57.335467Z	    8 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T06:56:57.342130Z	    8 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-13T06:56:57.543965Z	    8 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T06:57:19.564134Z	    9 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T06:57:19.570130Z	    9 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-13T06:57:19.864553Z	    9 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T06:57:23.090246Z	    9 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T07:01:15.065465Z	   10 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T07:01:15.071541Z	   10 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-13T07:01:15.413466Z	   10 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T07:01:18.667225Z	   10 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T07:04:05.019434Z	   11 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T07:04:05.031779Z	   11 Query	select `id`, `topic`, `entry`, `date_added` from `topics` limit 100
+2021-01-13T07:04:05.280149Z	   11 Quit	
+2021-01-13T07:04:05.284534Z	   12 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T07:04:05.293776Z	   12 Query	select `id`, `topic`, `entry`, `date_added` from `topics` limit 100
+2021-01-13T07:04:05.514444Z	   12 Quit	
+2021-01-13T07:04:25.823364Z	   13 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T07:04:25.826702Z	   13 Query	select `id`, `topic`, `entry`, `date_added` from `topics` limit 100
+2021-01-13T07:04:26.079323Z	   13 Quit	
+2021-01-13T07:15:32.773204Z	   14 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T07:15:32.783240Z	   14 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-13T08:15:32.000Z', 'It is a programming language', 'Python')
+2021-01-13T07:17:55.069714Z	   15 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T07:17:55.074969Z	   15 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-13T08:17:54.000Z', 'India is a country', 'India')
+2021-01-13T07:20:21.021863Z	   16 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T07:20:21.027733Z	   16 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-13T08:20:20.000Z', 'Football is a game', 'Football')
+2021-01-13T07:21:21.533228Z	   17 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T07:21:21.546646Z	   17 Query	select `id`, `topic`, `entry`, `date_added` from `topics` limit 100
+2021-01-13T07:21:21.887866Z	   17 Quit	
+2021-01-13T07:28:48.470923Z	   18 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T07:28:48.476697Z	   18 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-13T08:28:48.000Z', 'A place to log your learnings', 'Learning_Log')
+2021-01-13T07:44:56.045003Z	   19 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T07:44:56.052064Z	   19 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-13T08:44:55.000Z', 'It is a football game', 'PES_2020')
+2021-01-13T07:45:31.820220Z	   20 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T07:45:31.829859Z	   20 Query	select `id`, `topic`, `entry`, `date_added` from `topics` limit 100
+2021-01-13T07:45:32.095199Z	   20 Quit	
+2021-01-13T07:56:36.920987Z	   21 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T07:56:36.952403Z	   21 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T07:56:58.035650Z	   21 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T07:57:53.366980Z	   21 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T07:58:08.190534Z	   21 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T07:59:18.311852Z	   22 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T07:59:18.340068Z	   22 Query	select `id`, `topic`, `entry`, `date_added` from `topics` limit 100
+2021-01-13T07:59:18.631919Z	   22 Quit	
+2021-01-13T08:01:32.132026Z	   23 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:01:32.132065Z	   24 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:01:32.137497Z	   23 Query	update `topics` set `topic` = 'Chess', `entry` = 'Chess is a recreational and competitive board game played between two players. Sometimes called Western or international chess to distinguish it from its predecessors and other chess variants, the current form of the game emerged in Southern Europe during the second half of the 15th century after evolving from similar, much older games of Indian and Persian origin. Today, chess is one of the world\'s most popular games, played by millions of people worldwide at home, in clubs, online, by correspondence, and in tournaments.' where `id` = 1
+2021-01-13T08:01:32.139384Z	   24 Query	update `topics` set `topic` = 'Mars', `entry` = 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the \"Red Planet\".' where `id` = 2
+2021-01-13T08:01:32.288834Z	   24 Quit	
+2021-01-13T08:01:32.288920Z	   23 Quit	
+2021-01-13T08:01:35.429853Z	   26 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:01:35.430070Z	   25 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:01:35.432816Z	   26 Query	update `topics` set `topic` = 'Chess', `entry` = 'Chess is a recreational and competitive board game played between two players. Sometimes called Western or international chess to distinguish it from its predecessors and other chess variants, the current form of the game emerged in Southern Europe during the second half of the 15th century after evolving from similar, much older games of Indian and Persian origin. Today, chess is one of the world\'s most popular games, played by millions of people worldwide at home, in clubs, online, by correspondence, and in tournaments.' where `id` = 1
+2021-01-13T08:01:35.433308Z	   25 Query	update `topics` set `topic` = 'Mars', `entry` = 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the \"Red Planet\".' where `id` = 2
+2021-01-13T08:01:35.553612Z	   25 Quit	
+2021-01-13T08:01:35.553741Z	   26 Quit	
+2021-01-13T08:02:20.038920Z	   21 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:02:20.524206Z	   28 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:02:20.524576Z	   27 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:02:20.532765Z	   28 Query	update `topics` set `topic` = 'Chess', `entry` = 'Chess is a recreational and competitive board game played between two players. Sometimes called Western or international chess to distinguish it from its predecessors and other chess variants, the current form of the game emerged in Southern Europe during the second half of the 15th century after evolving from similar, much older games of Indian and Persian origin.' where `id` = 1
+2021-01-13T08:02:20.533633Z	   27 Query	update `topics` set `topic` = 'Mars', `entry` = 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the \"Red Planet\".' where `id` = 2
+2021-01-13T08:02:20.662235Z	   28 Quit	
+2021-01-13T08:02:20.662734Z	   27 Quit	
+2021-01-13T08:02:53.440487Z	   29 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:02:53.450825Z	   29 Query	select `id`, `topic`, `entry`, `date_added` from `topics` limit 100
+2021-01-13T08:02:53.672294Z	   29 Quit	
+2021-01-13T08:03:11.911730Z	   30 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:03:11.916305Z	   30 Query	update `topics` set `entry` = 'Chess is a recreational and competitive board game played between two players. Sometimes called Western or international chess to distinguish it from its predecessors and other chess variants, the current form of the game emerged in Southern Europe during the second half of the 15th century after evolving from similar, much older games of Indian and Persian origin. Today, chess is one of the world\'s most popular games, played by millions of people worldwide at home, in clubs, online, by correspondence, and in tournaments.', `topic` = 'Chess' where `id` = 1
+2021-01-13T08:03:12.046993Z	   30 Quit	
+2021-01-13T08:03:20.382659Z	   31 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:03:20.403724Z	   31 Query	select `id`, `topic`, `entry`, `date_added` from `topics` limit 100
+2021-01-13T08:03:20.677304Z	   31 Quit	
+2021-01-13T08:03:35.427958Z	   32 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:03:35.431619Z	   32 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-13T08:03:35.440571Z	   32 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-13T08:03:35.445925Z	   32 Query	select * from `wappler_migrations_lock`
+2021-01-13T08:03:35.451094Z	   32 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-13T08:03:35.459877Z	   32 Query	BEGIN
+2021-01-13T08:03:35.465733Z	   32 Query	update `wappler_migrations_lock` set `is_locked` = 1 where `is_locked` = 0
+2021-01-13T08:03:35.469171Z	   32 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-13T08:03:35.474261Z	   32 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-13T08:03:35.479645Z	   32 Query	select * from `wappler_migrations_lock`
+2021-01-13T08:03:35.485581Z	   32 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-13T08:03:35.489503Z	   32 Query	select max(`batch`) as `max_batch` from `wappler_migrations`
+2021-01-13T08:03:35.494434Z	   32 Query	update `topics` set `entry` = 'Chess is a recreational and competitive board game played between two players. Sometimes called Western or international chess to distinguish it from its predecessors and other chess variants, the current form of the game emerged in Southern Europe during the second half of the 15th century after evolving from similar, much older games of Indian and Persian origin. Today, chess is one of the world\'s most popular games, played by millions of people worldwide at home, in clubs, online, by correspondence, and in tournaments.', `topic` = 'Chess' where `id` = 1
+2021-01-13T08:03:35.502021Z	   32 Query	update `wappler_migrations_lock` set `is_locked` = 0
+2021-01-13T08:03:35.504981Z	   32 Query	ROLLBACK
+2021-01-13T08:03:35.612415Z	   32 Quit	
+2021-01-13T08:04:17.140603Z	   33 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:04:17.143301Z	   33 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-13T08:04:17.151903Z	   33 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-13T08:04:17.158246Z	   33 Query	select * from `wappler_migrations_lock`
+2021-01-13T08:04:17.162108Z	   33 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-13T08:04:17.170633Z	   33 Query	BEGIN
+2021-01-13T08:04:17.173943Z	   33 Query	update `wappler_migrations_lock` set `is_locked` = 1 where `is_locked` = 0
+2021-01-13T08:04:17.177138Z	   33 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-13T08:04:17.186162Z	   33 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-13T08:04:17.191205Z	   33 Query	select * from `wappler_migrations_lock`
+2021-01-13T08:04:17.194543Z	   33 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-13T08:04:17.198310Z	   33 Query	select max(`batch`) as `max_batch` from `wappler_migrations`
+2021-01-13T08:04:17.203374Z	   33 Query	update `topics` set `entry` = 'Chess is a recreational and competitive board game played between two players. Sometimes called Western or international chess to distinguish it from its predecessors and other chess variants, the current form of the game emerged in Southern Europe during the second half of the 15th century after evolving from similar, much older games of Indian and Persian origin. Today, chess is one of the world\'s most popular games, played by millions of people worldwide at home, in clubs, online, by correspondence, and in tournaments.', `topic` = 'Chess' where `id` = 1
+2021-01-13T08:04:17.206919Z	   33 Query	update `wappler_migrations_lock` set `is_locked` = 0
+2021-01-13T08:04:17.209163Z	   33 Query	ROLLBACK
+2021-01-13T08:04:17.326704Z	   33 Quit	
+2021-01-13T08:04:23.140254Z	   34 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:04:23.158689Z	   34 Query	select `id`, `topic`, `entry`, `date_added` from `topics` limit 100
+2021-01-13T08:04:23.474652Z	   34 Quit	
+2021-01-13T08:04:49.984777Z	   35 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:04:49.992635Z	   35 Query	update `topics` set `entry` = 'Chess is a recreational and competitive board game played between two players. Sometimes called Western or international chess to distinguish it from its predecessors and other chess variants, the current form of the game emerged in Southern Europe during the second half of the 15th century after evolving from similar, much older games of Indian and Persian origin.', `topic` = 'Chess' where `id` = 1
+2021-01-13T08:04:50.120760Z	   35 Quit	
+2021-01-13T08:05:08.596923Z	   37 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:05:08.596923Z	   36 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:05:08.603977Z	   37 Query	update `topics` set `entry` = 'Chess is a recreational and competitive board game played between two players. Sometimes called Western or international chess to distinguish it from its predecessors and other chess variants, the current form of the game emerged in Southern Europe during the second half of the 15th century after evolving from similar, much older games of Indian and Persian origin.', `topic` = 'Chess' where `id` = 1
+2021-01-13T08:05:08.603977Z	   36 Query	update `topics` set `entry` = 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury.' where `id` = 2
+2021-01-13T08:05:08.730892Z	   37 Quit	
+2021-01-13T08:05:08.731089Z	   36 Quit	
+2021-01-13T08:05:45.299703Z	   38 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:05:45.308276Z	   38 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-13T08:05:45.315418Z	   38 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-13T08:05:45.325471Z	   38 Query	select * from `wappler_migrations_lock`
+2021-01-13T08:05:45.330725Z	   38 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-13T08:05:45.337647Z	   38 Query	BEGIN
+2021-01-13T08:05:45.345145Z	   38 Query	update `wappler_migrations_lock` set `is_locked` = 1 where `is_locked` = 0
+2021-01-13T08:05:45.349130Z	   38 Query	select * from information_schema.tables where table_name = 'wappler_migrations' and table_schema = database()
+2021-01-13T08:05:45.358636Z	   38 Query	select * from information_schema.tables where table_name = 'wappler_migrations_lock' and table_schema = database()
+2021-01-13T08:05:45.363979Z	   38 Query	select * from `wappler_migrations_lock`
+2021-01-13T08:05:45.368332Z	   38 Query	select `name` from `wappler_migrations` order by `id` asc
+2021-01-13T08:05:45.372681Z	   38 Query	select max(`batch`) as `max_batch` from `wappler_migrations`
+2021-01-13T08:05:45.376852Z	   38 Query	update `topics` set `entry` = 'Chess is a recreational game', `topic` = 'Chess' where `id` = 1
+2021-01-13T08:05:45.380653Z	   38 Query	update `topics` set `entry` = 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury.' where `id` = 2
+2021-01-13T08:05:45.390039Z	   38 Query	insert into `wappler_migrations` (`batch`, `migration_time`, `name`) values (6, '2021-01-13 13:35:45.761', '20210113133545_topi.js')
+2021-01-13T08:05:45.395781Z	   38 Query	update `wappler_migrations_lock` set `is_locked` = 0
+2021-01-13T08:05:45.399524Z	   38 Query	COMMIT
+2021-01-13T08:05:45.502351Z	   39 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:05:45.507641Z	   39 Query	select TABLE_NAME, ENGINE, TABLE_SCHEMA, TABLE_COLLATION, TABLE_COMMENT from information_schema.tables where table_schema = 'logs' and table_type = 'BASE TABLE' order by CREATE_TIME desc
+2021-01-13T08:05:45.521746Z	   39 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'topics' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-13T08:05:45.527346Z	   38 Quit	
+2021-01-13T08:05:45.539230Z	   40 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:05:45.539245Z	   41 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:05:45.540581Z	   42 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:05:45.541799Z	   43 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:05:45.542553Z	   44 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:05:45.549639Z	   39 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'users' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-13T08:05:45.553090Z	   40 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'userinfo' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-13T08:05:45.553645Z	   41 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'cars' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-13T08:05:45.554955Z	   42 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'countries' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-13T08:05:45.557382Z	   43 Query	select c.COLUMN_NAME, c.COLUMN_DEFAULT, c.DATA_TYPE, c.CHARACTER_MAXIMUM_LENGTH, c.IS_NULLABLE, c.COLUMN_KEY, c.EXTRA, c.COLLATION_NAME, c.COLLATION_NAME, c.COLUMN_COMMENT,
+  fk.REFERENCED_TABLE_NAME, fk.REFERENCED_COLUMN_NAME, fk.CONSTRAINT_NAME, rc.UPDATE_RULE, rc.DELETE_RULE, rc.MATCH_OPTION
+  from information_schema.columns c
+left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE fk on fk.TABLE_NAME = c.TABLE_NAME AND
+  fk.COLUMN_NAME = c.COLUMN_NAME AND fk.CONSTRAINT_SCHEMA = c.TABLE_SCHEMA
+left join INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS rc on rc.TABLE_NAME = fk.TABLE_NAME AND
+  rc.CONSTRAINT_NAME = fk.CONSTRAINT_NAME AND rc.CONSTRAINT_SCHEMA = fk.CONSTRAINT_SCHEMA
+where c.table_name = 'images' and c.table_schema = 'logs' order by c.TABLE_NAME, c.ORDINAL_POSITION
+2021-01-13T08:05:45.822249Z	   44 Quit	
+2021-01-13T08:05:45.822339Z	   39 Quit	
+2021-01-13T08:05:45.823366Z	   40 Quit	
+2021-01-13T08:05:45.824343Z	   41 Quit	
+2021-01-13T08:05:45.825034Z	   43 Quit	
+2021-01-13T08:05:45.825802Z	   42 Quit	
+2021-01-13T08:06:00.463939Z	   45 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T08:06:00.480621Z	   45 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:07:09.333078Z	   46 Connect	root@172.21.0.1 on logs using TCP/IP
+2021-01-13T08:07:09.337375Z	   46 Query	select `id`, `topic`, `entry`, `date_added` from `topics` limit 100
+2021-01-13T08:07:09.638678Z	   46 Quit	
+2021-01-13T08:08:47.505132Z	   47 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T08:08:47.511357Z	   47 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:09:04.231872Z	   47 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:09:10.995642Z	   47 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:09:13.143288Z	   47 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:09:14.898390Z	   47 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:09:29.724170Z	   48 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T08:09:29.737459Z	   48 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:09:36.967952Z	   48 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:09:43.347147Z	   48 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:09:49.042574Z	   48 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-13T08:09:49.355253Z	   48 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T08:17:56.714064Z	   49 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T08:17:56.723331Z	   49 Query	insert into `userinfo` (`loginuser_id`, `password`, `username`) values (false, 'b90eb0c518bde0d569cb095dba455463ef69c24aafdf9e23ca1978485722962a719cd1f3eb48f481c2a47b8df022f56e34ec407e7467c3466a3de4c024a1a3bd', 'aero767')
+2021-01-13T08:17:56.733231Z	   49 Query	insert into `users` (`company`, `email`, `first_name`, `gender`, `last_name`, `regitster_id`) values ('', '', '', '', '', 10)
+2021-01-13T08:18:00.765719Z	   49 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-13T08:18:01.109926Z	   49 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T08:18:05.242522Z	   49 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T08:18:07.420816Z	   49 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T08:18:07.432056Z	   49 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:18:10.636362Z	   49 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+/usr/sbin/mysqld, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2021-01-13T08:28:06.521749Z	    8 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T08:28:06.528736Z	    8 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T08:28:20.039173Z	    8 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T09:25:09.067714Z	    9 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T09:25:09.074995Z	    9 Query	insert into `userinfo` (`loginuser_id`, `password`, `username`) values (false, '974e52906f05a1b913f61d8d77364d89285e10de8831b752edbee39e683777bd7e51e4f2a43c3d214187d6ca608d5cb167c5265e3ed851e6a82cc104dd95d00e', 'Osama')
+2021-01-13T09:25:09.094002Z	    9 Query	insert into `users` (`company`, `email`, `first_name`, `gender`, `last_name`, `regitster_id`) values ('Alqaidah', 'osama123@gmail.com', 'Osama', 'Male', 'Bin Laden', 11)
+2021-01-13T09:25:32.251125Z	    9 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'Osama'
+2021-01-13T09:25:40.079053Z	    9 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'Osama'
+2021-01-13T09:25:50.629191Z	    9 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'Osama'
+2021-01-13T09:25:59.504471Z	    9 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'Osama'
+2021-01-13T09:26:08.065643Z	    9 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'Osama'
+2021-01-13T09:26:12.828855Z	    9 Query	insert into `userinfo` (`loginuser_id`, `password`, `username`) values (false, 'b90eb0c518bde0d569cb095dba455463ef69c24aafdf9e23ca1978485722962a719cd1f3eb48f481c2a47b8df022f56e34ec407e7467c3466a3de4c024a1a3bd', 'aero767')
+2021-01-13T09:26:12.855794Z	    9 Query	insert into `users` (`company`, `email`, `first_name`, `gender`, `last_name`, `regitster_id`) values ('', '', '', '', '', 12)
+2021-01-13T09:26:15.342698Z	    9 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-13T09:26:15.520535Z	    9 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T09:26:24.787654Z	    9 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T09:26:26.429520Z	    9 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T09:26:26.433975Z	    9 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T09:26:31.138596Z	    9 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T09:33:48.531160Z	    9 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T09:42:45.348311Z	   10 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T09:42:45.355479Z	   10 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-13T10:42:45.000Z', 'A social network to connect professionals', 'LinkedIn')
+2021-01-13T09:42:48.624993Z	   10 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T09:57:18.255046Z	   11 Connect	db_user@172.21.0.2 on logs using TCP/IP
+2021-01-13T09:57:18.267016Z	   11 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T10:02:15.534969Z	   11 Query	insert into `userinfo` (`loginuser_id`, `password`, `username`) values (false, 'abb0d221e96b3b019bf6341adee0ded6ce451d90212e83caa5938f394063b0c81a1648043ebf5e5a2654e74e54cd4d1049d726f7b83c9af8e3ae8909c4b96aa5', 'Learning')
+2021-01-13T10:02:15.590993Z	   11 Query	insert into `users` (`company`, `email`, `first_name`, `gender`, `last_name`, `regitster_id`) values ('Learning', 'learninglog123@gmail.com', 'Learning', 'Male', 'Log', 13)
+2021-01-13T10:02:39.978740Z	   11 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'learning'
+2021-01-13T10:02:51.508570Z	   11 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'learning'
+2021-01-13T10:03:04.061877Z	   11 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-13T10:03:04.310682Z	   11 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T10:03:25.493870Z	   11 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-13T10:03:25.708763Z	   11 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T10:03:29.491171Z	   11 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T10:03:45.355392Z	   11 Query	insert into `topics` (`date_added`, `entry`, `topic`) values ('2021-01-13T11:03:45.000Z', 'Football is a game', 'Football')
+2021-01-13T10:03:52.585900Z	   11 Query	select `id`, `topic`, `entry` from `topics`
+2021-01-13T10:03:52.596378Z	   11 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T10:09:44.401306Z	   11 Query	select `id`, `username`, `password` from `userinfo` where `username` = 'aero767'
+2021-01-13T10:09:44.660229Z	   11 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+2021-01-13T10:14:06.762393Z	   11 Query	select `userinfo`.`id`, `userinfo`.`username`, `users`.`first_name`, `users`.`last_name`, `users`.`email` from `userinfo` inner join `users` on `users`.`id` = `userinfo`.`id` where `userinfo`.`id` = 9 limit 1
+/usr/sbin/mysqld, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+/usr/sbin/mysqld, Version: 8.0.22 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument

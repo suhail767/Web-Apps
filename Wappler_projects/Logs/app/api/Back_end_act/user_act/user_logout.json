@@ -1,0 +1,11 @@
+[
+  "SecurityProviders/sp_log",
+  {
+    "name": "",
+    "module": "auth",
+    "action": "logout",
+    "options": {
+      "provider": "sp_log"
+    }
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "$_POST": [
+      {
+        "type": "text",
+        "name": "topic"
+      },
+      {
+        "type": "text",
+        "name": "entry"
+      }
+    ]
+  },
+  "exec": {
+    "steps": [
+      "connections/db",
+      {
+        "name": "insert_topic_add",
+        "module": "dbupdater",
+        "action": "insert",
+        "options": {
+          "connection": "db",
+          "sql": {
+            "type": "insert",
+            "values": [
+              {
+                "table": "topics",
+                "column": "topic",
+                "type": "text",
+                "value": "{{$_POST.topic}}"
+              },
+              {
+                "table": "topics",
+                "column": "entry",
+                "type": "text",
+                "value": "{{$_POST.entry}}"
+              },
+              {
+                "table": "topics",
+                "column": "date_added",
+                "type": "text",
+                "value": "{{NOW.dateAdd('hours', 1)}}"
+              }
+            ],
+            "table": "topics",
+            "returning": "id",
+            "query": "INSERT INTO topics\n(topic, entry, date_added) VALUES (:P1 /* {{$_POST.topic}} */, :P2 /* {{$_POST.entry}} */, :P3 /* {{NOW.dateAdd('hours', 1)}} */)",
+            "params": [
+              {
+                "name": ":P1",
+                "type": "expression",
+                "value": "{{$_POST.topic}}"
+              },
+              {
+                "name": ":P2",
+                "type": "expression",
+                "value": "{{$_POST.entry}}"
+              },
+              {
+                "name": ":P3",
+                "type": "expression",
+                "value": "{{NOW.dateAdd('hours', 1)}}"
+              }
+            ]
+          }
+        },
+        "meta": [
+          {
+            "name": "identity",
+            "type": "text"
+          },
+          {
+            "name": "affected",
+            "type": "number"
+          }
+        ]
+      },
+      "SecurityProviders/sp_log"
+    ]
+  }
+}

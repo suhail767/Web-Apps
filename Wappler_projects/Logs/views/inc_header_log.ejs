@@ -1,0 +1,41 @@
+<!-- Wappler include head-page="Dashboard_page" appConnect="local" is="dmx-app" bootstrap4="local" fontawesome_4="cdn" jquery_slim_33="cdn" components="{dmxBrowser:{}}" -->
+<div is="dmx-browser" id="browser1"></div>
+<dmx-serverconnect id="sc_template" url="api/Back_end_act/user_act/user_logout" dmx-on:success="browser1.goto('Login_user')" noload></dmx-serverconnect>
+<header class="container navbar-light text-body mw-100">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg bg-light justify-content-between navbar-light navbar-expand">
+                    <i class="fa fa-book fa-fw fa-2x"></i>
+                    <a class="navbar-brand ml-auto mr-auto pl-1 disabled font-weight-bolder" href="#"><b>Learning Log</b></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1_collapse" aria-controls="navbar1_collapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbar1_collapse">
+                        <div class="navbar-nav">
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown1" role="button" aria-haspopup="true" aria-expanded="false">Topic Management</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown1">
+                                    <a class="dropdown-item" href="Dashboard_page">Add Topic</a>
+                                    <a class="dropdown-item" href="#">View Topic</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-nav justify-content-end d-none d-lg-flex ml-md-auto">
+                        <a class="nav-item nav-link text-center font-weight-bold" href="javascript:void(0):" dmx-on:click="sc_logout.load();browser1.goto('Login_user')">Logout</a>
+                        <div class="nav-item dropdown">
+                            <div class="dropdown-menu" aria-labelledby="dropdown2">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

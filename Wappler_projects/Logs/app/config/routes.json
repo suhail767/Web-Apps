@@ -1,0 +1,41 @@
+{
+  "routes": [
+    {
+      "path": "/view_topic",
+      "url": "",
+      "name": "view_topic",
+      "routeType": "page",
+      "page": "view_topic"
+    },
+    {
+      "path": "/add_topics",
+      "url": "",
+      "routeType": "page",
+      "page": "add_topics",
+      "name": "add_topics"
+    },
+    {
+      "path": "/Home_page",
+      "page": "Home_page"
+    },
+    {
+      "path": "/Loginpage",
+      "page": "Loginpage",
+      "layout": "loginpage"
+    },
+    {
+      "path": "/Login_user",
+      "page": "Login_user",
+      "layout": "login_page"
+    },
+    {
+      "path": "/Dashboard_page",
+      "page": "Dashboard_page",
+      "routeType": "page"
+    },
+    {
+      "path": "/Topics",
+      "page": "Topics"
+    }
+  ]
+}

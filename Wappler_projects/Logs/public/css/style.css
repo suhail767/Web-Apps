@@ -1,0 +1,25 @@
+.slider-title {
+    position: absolute;
+    top: 15px
+}
+.slider-title:hover {
+    position: absolute
+}
+.style1 {
+    position: absolute
+}
+.style2 {
+    top: 30px
+}
+.style3 {
+    position: absolute
+}
+.style4 {
+    position: absolute}
+.style5 {
+    position: absolute;
+    top: 50px;
+    text-align: left;
+    left: 30px;
+    font-size: 30px
+}

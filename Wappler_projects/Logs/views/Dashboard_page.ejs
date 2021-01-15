@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="ac:route" content="/Dashboard_page">
+    <base href="/">
+    <script src="dmxAppConnect/dmxAppConnect.js"></script>
+    <meta charset="UTF-8">
+    <title>Learning Log</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap/4/css/bootstrap.min.css" />
+    <script src="dmxAppConnect/dmxBootstrap4Navigation/dmxBootstrap4Navigation.js" defer=""></script>
+    <script src="dmxAppConnect/dmxBrowser/dmxBrowser.js" defer=""></script>
+    <link rel="stylesheet" href="dmxAppConnect/dmxValidator/dmxValidator.css" />
+    <script src="dmxAppConnect/dmxValidator/dmxValidator.js" defer=""></script>
+    <script src="dmxAppConnect/dmxTyped/dmxTyped.js" defer=""></script>
+    <script src="dmxAppConnect/dmxTyped/typed.min.js" defer=""></script>
+    <script src="dmxAppConnect/dmxBootstrap4Alert/dmxBootstrap4Alert.js" defer=""></script>
+    <script src="dmxAppConnect/dmxBackgroundVideo/dmxBackgroundVideo.js" defer=""></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body is="dmx-app" id="Dashboard_page" class="d-flex" src="assets/img/nature-3.jpg">
+    <header class="container navbar-light text-body mw-100">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 text-info">
+                    <nav class="navbar navbar-expand-lg bg-light justify-content-between navbar-light navbar-expand">
+                        <i class="fa fa-book fa-fw fa-2x"></i>
+                        <a class="navbar-brand ml-auto mr-auto pl-1 font-weight-bolder" href="#" dmx-on:click="browser1.goto('/')" target="_self"><b>Learning Log</b></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1_collapse" aria-controls="navbar1_collapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbar1_collapse">
+                            <div class="navbar-nav">
+                                <div class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown1" role="button" aria-haspopup="true" aria-expanded="false">Topic Management</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown1">
+                                        <a class="dropdown-item" href="add_topics">Add Topic</a>
+                                        <a class="dropdown-item" href="view_topic">View Topic</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-nav justify-content-end d-none d-lg-flex ml-md-auto">
+                            <a class="nav-item nav-link text-center font-weight-bold" href="javascript:void(0):" dmx-on:click="sc_logout.load();browser1.goto('Login_user')">Logout</a>
+                            <div class="nav-item dropdown">
+                                <div class="dropdown-menu" aria-labelledby="dropdown2">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col style3"><img style="opacity:0.4" src="assets/img/kelly-sikkema-VBPzRgd7gfc-unsplash%20%281%29.jpg" class="img-fluid rounded align-self-center mt-3 mb-2 ml-2 mr-4 style4" width="70%" height="60%">
+                        <h3 class="style5">Log your learnings here</h3>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+    </header>
+
+    <dmx-serverconnect id="sc_loggedin_user_data" url="api/Back_end_act/user_act/q_loggedin_userdata"></dmx-serverconnect>
+    <div is="dmx-browser" id="browser1"></div>
+    <dmx-serverconnect id="sc_template" url="api/Back_end_act/user_act/user_logout" noload dmx-on:success="browser1.goto('Login_user')"></dmx-serverconnect>
+
+    <script src="bootstrap/4/js/popper.min.js"></script>
+    <script src="bootstrap/4/js/bootstrap.min.js"></script>
+</body>
+
+</html>

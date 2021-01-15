@@ -1,0 +1,15 @@
+[
+  "connections/db",
+  "SecurityProviders/sp_log",
+  {
+    "name": "identity",
+    "module": "auth",
+    "action": "login",
+    "options": {
+      "provider": "sp_log",
+      "password": "{{$_POST.password.sha512('tempsalt')}}"
+    },
+    "output": true,
+    "meta": []
+  }
+]

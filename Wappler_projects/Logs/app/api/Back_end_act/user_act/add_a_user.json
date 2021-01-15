@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "$_POST": [
+      {
+        "type": "text",
+        "name": "username"
+      },
+      {
+        "type": "text",
+        "name": "password"
+      },
+      {
+        "type": "text",
+        "name": "first_name"
+      },
+      {
+        "type": "text",
+        "name": "last_name"
+      },
+      {
+        "type": "text",
+        "name": "gender"
+      },
+      {
+        "type": "text",
+        "name": "email"
+      },
+      {
+        "type": "text",
+        "name": "company"
+      }
+    ]
+  },
+  "exec": {
+    "steps": [
+      "connections/db",
+      "SecurityProviders/sp_log",
+      {
+        "name": "insert_new_user",
+        "module": "dbupdater",
+        "action": "insert",
+        "options": {
+          "connection": "db",
+          "sql": {
+            "type": "insert",
+            "values": [
+              {
+                "table": "userinfo",
+                "column": "username",
+                "type": "text",
+                "value": "{{$_POST.username}}"
+              },
+              {
+                "table": "userinfo",
+                "column": "password",
+                "type": "text",
+                "value": "{{$_POST.password.sha512('tempsalt')}}"
+              },
+              {
+                "table": "userinfo",
+                "column": "loginuser_id",
+                "type": "text",
+                "value": "{{identity}}"
+              }
+            ],
+            "table": "userinfo",
+            "returning": "id",
+            "query": "INSERT INTO userinfo\n(username, password, loginuser_id) VALUES (:P1 /* {{$_POST.username}} */, :P2 /* {{$_POST.password.sha512('tempsalt')}} */, :P3 /* {{identity}} */)",
+            "params": [
+              {
+                "name": ":P1",
+                "type": "expression",
+                "value": "{{$_POST.username}}"
+              },
+              {
+                "name": ":P2",
+                "type": "expression",
+                "value": "{{$_POST.password.sha512('tempsalt')}}"
+              },
+              {
+                "name": ":P3",
+                "type": "expression",
+                "value": "{{identity}}"
+              }
+            ]
+          }
+        },
+        "meta": [
+          {
+            "name": "identity",
+            "type": "text"
+          },
+          {
+            "name": "affected",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "insert_existing_user",
+        "module": "dbupdater",
+        "action": "insert",
+        "options": {
+          "connection": "db",
+          "sql": {
+            "type": "insert",
+            "values": [
+              {
+                "table": "users",
+                "column": "first_name",
+                "type": "text",
+                "value": "{{$_POST.first_name}}"
+              },
+              {
+                "table": "users",
+                "column": "last_name",
+                "type": "text",
+                "value": "{{$_POST.last_name}}"
+              },
+              {
+                "table": "users",
+                "column": "gender",
+                "type": "text",
+                "value": "{{$_POST.gender}}"
+              },
+              {
+                "table": "users",
+                "column": "email",
+                "type": "text",
+                "value": "{{$_POST.email}}"
+              },
+              {
+                "table": "users",
+                "column": "company",
+                "type": "text",
+                "value": "{{$_POST.company}}"
+              },
+              {
+                "table": "users",
+                "column": "regitster_id",
+                "type": "text",
+                "value": "{{insert_new_user.identity}}"
+              }
+            ],
+            "table": "users",
+            "returning": "id",
+            "query": "INSERT INTO users\n(first_name, last_name, gender, email, company, regitster_id) VALUES (:P1 /* {{$_POST.first_name}} */, :P2 /* {{$_POST.last_name}} */, :P3 /* {{$_POST.gender}} */, :P4 /* {{$_POST.email}} */, :P5 /* {{$_POST.company}} */, :P6 /* {{insert_new_user.identity}} */)",
+            "params": [
+              {
+                "name": ":P1",
+                "type": "expression",
+                "value": "{{$_POST.first_name}}"
+              },
+              {
+                "name": ":P2",
+                "type": "expression",
+                "value": "{{$_POST.last_name}}"
+              },
+              {
+                "name": ":P3",
+                "type": "expression",
+                "value": "{{$_POST.gender}}"
+              },
+              {
+                "name": ":P4",
+                "type": "expression",
+                "value": "{{$_POST.email}}"
+              },
+              {
+                "name": ":P5",
+                "type": "expression",
+                "value": "{{$_POST.company}}"
+              },
+              {
+                "name": ":P6",
+                "type": "expression",
+                "value": "{{insert_new_user.identity}}"
+              }
+            ]
+          }
+        },
+        "meta": [
+          {
+            "name": "identity",
+            "type": "text"
+          },
+          {
+            "name": "affected",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "",
+        "module": "auth",
+        "action": "restrict",
+        "options": {
+          "provider": "sp_log",
+          "loginUrl": "/Login_user",
+          "forbiddenUrl": "/Home_page"
+        }
+      }
+    ]
+  }
+}

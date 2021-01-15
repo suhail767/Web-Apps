@@ -1,0 +1,20 @@
+{
+  "bootstrap4": {
+    "basic": {
+      "headings-font-family": "Archivo Black:400",
+      "body-bg": "rgba(230, 238, 240, 0.51)",
+      "body-color": "#0d0c0c",
+      "enable-gradients": true,
+      "enable-shadows": true,
+      "border-width": "3px",
+      "border-radius": ".6rem",
+      "spacer": "1.2rem",
+      "link-color": "#0b10f7",
+      "secondary": "#f2b4de",
+      "light": "#f7fafa",
+      "dark": "#0a0a0a",
+      "font-family-base": "Abel:400"
+    },
+    "advanced": {}
+  }
+}

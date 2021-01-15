@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="ac:route" content="/Home_page">
+    <base href="/">
+    <script src="dmxAppConnect/dmxAppConnect.js"></script>
+    <meta charset="UTF-8">
+    <title>Register an account</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap/4/css/bootstrap.min.css" />
+    <script src="dmxAppConnect/dmxBrowser/dmxBrowser.js" defer=""></script>
+    <script src="dmxAppConnect/dmxBootstrap4Alert/dmxBootstrap4Alert.js" defer=""></script>
+    <script src="dmxAppConnect/dmxScheduler/dmxScheduler.js" defer=""></script>
+</head>
+
+<body is="dmx-app" id="register_page">
+    <dmx-scheduler id="scheduler1" dmx-on:tick="form_add_user.alert1.hide()" delay="3" noload="true"></dmx-scheduler>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="font-weight-bold text-center text-body">Register a Learning Log</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div is="dmx-browser" id="browser1"></div>
+    <div class="container mt-5 mb-4 ml-3 mr-3 pt-2 pb-2 pl-5 pr-5">
+        <div class="row">
+            <div class="col">
+                <form is="dmx-serverconnect-form" id="form_add_user" method="post" action="api/Back_end_act/user_act/add_a_user" dmx-generator="bootstrap4" dmx-form-type="horizontal">
+                    <div class="form-group row">
+                        <label for="inp_username" class="col-sm-2 col-form-label">Username</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inp_username" name="username" aria-describedby="inp_username_help" placeholder="Enter Username">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inp_password" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inp_password" name="password" aria-describedby="inp_password_help" placeholder="Enter Password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inp_first_name" class="col-sm-2 col-form-label">First name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inp_first_name" name="first_name" aria-describedby="inp_first_name_help" placeholder="Enter First name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inp_last_name" class="col-sm-2 col-form-label">Last name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inp_last_name" name="last_name" aria-describedby="inp_last_name_help" placeholder="Enter Last name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inp_gender" class="col-sm-2 col-form-label">Gender</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inp_gender" name="gender" aria-describedby="inp_gender_help" placeholder="Enter Gender">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inp_email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inp_email" name="email" aria-describedby="inp_email_help" placeholder="Enter Email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inp_company" class="col-sm-2 col-form-label">Company</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inp_company" name="company" aria-describedby="inp_company_help" placeholder="Enter Company">
+                        </div>
+                    </div>
+                    <div class="alert" id="alert1" is="dmx-bs4-alert" role="alert">
+                        <p>This is a nice alert!</p>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2">&nbsp;</div>
+                        <div class="col-sm-10 mt-5 mb-3">
+                            <button type="submit" class="btn btn-primary active"
+                                dmx-on:click="browser1.goto('Login_user');form_add_user.alert1.show();form_add_user.alert1.setType('success');form_add_user.alert1.setTextContent('Successfully Registered!');scheduler1.start()">Create User</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap/4/js/popper.min.js"></script>
+    <script src="bootstrap/4/js/bootstrap.min.js"></script>
+</body>
+
+</html>

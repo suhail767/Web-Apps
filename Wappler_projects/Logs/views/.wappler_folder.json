@@ -1,0 +1,26 @@
+{
+  "Home_page.ejs": {
+    "layoutPage": "",
+    "description": ""
+  },
+  "Loginpage.ejs": {
+    "layoutPage": "loginpage",
+    "description": ""
+  },
+  "Login_user.ejs": {
+    "layoutPage": "login_page",
+    "description": ""
+  },
+  "Dashboard_page.ejs": {
+    "layoutPage": "",
+    "description": ""
+  },
+  "Topics.ejs": {
+    "layoutPage": "",
+    "description": ""
+  },
+  "page.ejs": {
+    "layoutPage": "",
+    "description": ""
+  }
+}

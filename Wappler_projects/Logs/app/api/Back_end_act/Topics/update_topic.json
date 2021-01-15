@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "$_POST": [
+      {
+        "type": "text",
+        "name": "topic"
+      },
+      {
+        "type": "text",
+        "name": "entry"
+      },
+      {
+        "type": "number",
+        "name": "id"
+      },
+      {
+        "type": "text",
+        "name": "date_added"
+      }
+    ]
+  },
+  "exec": {
+    "steps": [
+      "connections/db",
+      "SecurityProviders/sp_log",
+      {
+        "name": "",
+        "module": "auth",
+        "action": "restrict",
+        "options": {
+          "provider": "sp_log",
+          "loginUrl": "/Login_user",
+          "forbiddenUrl": "/Home_page"
+        }
+      },
+      {
+        "name": "update_topic",
+        "module": "dbupdater",
+        "action": "update",
+        "options": {
+          "connection": "db",
+          "sql": {
+            "type": "update",
+            "values": [
+              {
+                "table": "topics",
+                "column": "topic",
+                "type": "text",
+                "value": "{{$_POST.topic}}"
+              },
+              {
+                "table": "topics",
+                "column": "entry",
+                "type": "text",
+                "value": "{{$_POST.entry}}"
+              },
+              {
+                "table": "topics",
+                "column": "date_added",
+                "type": "text",
+                "value": "{{$_POST.date_added}}"
+              }
+            ],
+            "table": "topics",
+            "wheres": {
+              "condition": "AND",
+              "rules": [
+                {
+                  "id": "id",
+                  "type": "double",
+                  "operator": "equal",
+                  "value": "{{$_POST.id}}",
+                  "data": {
+                    "column": "id"
+                  },
+                  "operation": "="
+                }
+              ]
+            },
+            "query": "UPDATE topics\nSET topic = :P1 /* {{$_POST.topic}} */, entry = :P2 /* {{$_POST.entry}} */, date_added = :P3 /* {{$_POST.date_added}} */\nWHERE id = :P4 /* {{$_POST.id}} */",
+            "params": [
+              {
+                "name": ":P1",
+                "type": "expression",
+                "value": "{{$_POST.topic}}"
+              },
+              {
+                "name": ":P2",
+                "type": "expression",
+                "value": "{{$_POST.entry}}"
+              },
+              {
+                "name": ":P3",
+                "type": "expression",
+                "value": "{{$_POST.date_added}}"
+              },
+              {
+                "operator": "equal",
+                "type": "expression",
+                "name": ":P4",
+                "value": "{{$_POST.id}}"
+              }
+            ]
+          }
+        },
+        "meta": [
+          {
+            "name": "affected",
+            "type": "number"
+          }
+        ]
+      }
+    ]
+  }
+}
